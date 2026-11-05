@@ -6,6 +6,18 @@ Set $output to the case's evidence directory.
 
     $output = 'C:\Cases\IR-001'
 
+Run everything
+--------------
+
+    .\Invoke-BrowserHistory.ps1 -ComputerName 'WORKSTATION01' -OutputDirectory $output
+    .\Invoke-BrowserHistory.ps1 -ComputerName $env:COMPUTERNAME -OutputDirectory $output
+
+Use the first command for a remote target or the second for the local
+workstation. The script prints the collection folder and the paths to
+the JSON, CSV, and HTML report. If Python is installed outside PATH,
+pass -Python 'C:\Path\To\python.exe'. The master script also accepts
+-UsersRoot. The commands below run each stage separately.
+
 Local workstation
 -----------------
 

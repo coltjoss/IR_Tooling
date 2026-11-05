@@ -101,3 +101,4 @@ foreach ($user in $users) {
 Write-Host "Collected $count database(s). Collection errors: $failed."
 if ($count) { Write-Output $collection }
 if ($failed -or -not $count) { exit 1 }
+exit 0
